@@ -1,0 +1,343 @@
+@import "../../commons/mixins/mixin.scss";
+
+.main {
+    display: flex;
+    min-height: rem(800px);
+    background-image: url('./images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: rem(1176px);
+            height: rem(313px);
+            background-image: url('./images/portfolio-header.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            @include tablets () {
+                width: rem(738px);
+                
+            }
+            @include phones {
+                width: rem(400px);
+                top: 70%;
+            }
+        }
+        
+        
+    }
+    &__arrow-down {
+        margin-top: rem(133px);
+    }
+    
+}
+.greetings {
+    &__logo {
+        width: rem(141px);
+        height: rem(141px);
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: rem(40px);
+        margin-bottom: rem(20px);
+    }
+    &__name {
+        font-family: 'Roboto';
+        font-size: rem(35px);
+        font-weight: 500;
+        color: #fff;
+    }
+    &__title {
+        font-family: 'Roboto';
+        font-size: rem(16px);
+        font-weight: normal;
+        color: #fff;
+        line-height: 1.5;
+    }
+}
+.box {
+    margin-top: rem(-200px);
+}
+.traingle .left{
+    fill: #f8f9f5;
+}
+.traingle .right{
+    fill: #f8f9f5;
+}
+svg {
+    display: block;
+}
+.about {
+
+    &__left-title {
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 63.2px;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-style: normal;
+        color: #373e42;
+        line-height: 1.05;
+        letter-spacing: 1.6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include tablets () {
+            font-size: rem(49px);
+        }
+        &:after {
+            content: '';
+            display: flex;
+            width: rem(90px);
+            height: rem(3px);
+            background-color: #373e42;
+            margin-top: rem(30px);
+            margin-bottom: rem(30px);
+            
+        }
+
+        &--small {
+            font-size: rem(35px);
+            color: #566358;
+            width: rem(350px);
+            @include tablets () {
+                width: rem(600px);
+                font-size: rem(29px);
+                margin-top: rem(50px);
+            }
+            @include phones {
+                width: rem(500px);
+                
+            }
+            
+        }
+        &--work {
+            display: flex;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: rem(500px);
+                height: rem(175px);
+                background-image: url('./images/works-header.png');
+                background-size: contain;
+                @include phones {
+                    width: rem(400px);
+                    background-repeat: no-repeat;
+                }
+                @include tablets {
+                    width: rem(400px);
+                    background-repeat: no-repeat;
+                }
+            }
+            @include phones {
+                margin-top: rem(50px);
+            }
+            @include tablets {
+                margin-top: rem(50px);
+            }
+        }
+        &--about {
+            display: flex;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: rem(500px);
+                height: rem(175px);
+                background-image: url('./images/about-header.png');
+                background-size: contain;
+                @include phones {
+                    width: rem(400px);
+                    background-repeat: no-repeat;
+                }
+                @include tablets {
+                    width: rem(400px);
+                    background-repeat: no-repeat;
+                }
+            }
+            @include tablets {
+                margin-top: rem(50px);
+            }
+        }
+    }
+}
+.work {
+    &__title {
+        display: flex;
+        background-color: #f8f9f5;
+        justify-content: center;
+    }
+}
+
+// about me
+
+.work {
+    &__about-me {
+        margin-top: rem(200px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('./images/about-me-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: rem(1600px);
+        height: 100%;
+        width: 100%;
+    }
+    &__about-me-title {
+        
+        width: rem(500px);
+    }
+    &__about-me-content , {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    &__about-me-content-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include phones {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__about-me-content-item   {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include phones {
+            margin-bottom: rem(50px);
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        
+    }
+    &__about-me-content-logo {
+        display: flex;
+        width: rem(77px);
+        height: rem(77px);
+        overflow: hidden;
+        border-radius: 50%;
+        margin-bottom: rem(20px)
+    }
+    &__about-me-content-comment {
+        display: flex;
+        width: 50%;
+        font-family: 'Roboto';
+        font-size: rem(16px);
+        color: #5d5a55;
+        margin-bottom: rem(30px);
+        font-style: italic;
+        @include phones {
+            width: 90%;
+        }
+    }
+    &__about-me-content-author {
+        font-family: 'Roboto';
+        font-size: rem(16px);
+        font-style: italic;
+        color: #4e8839;
+        font-weight: bold;
+        &--job {
+            font-weight: normal;
+            color: #373e42;
+        }
+    }
+}
+// contant 
+
+.work {
+    &__contact{
+        max-width: rem(400px);
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+        margin-top: rem(70px);
+    }
+    &__contact-title {
+        margin-top: rem(32px);
+    }
+    &__contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    &__contact-form-name , &__contact-form-email, &__contact-form-style {
+        width: rem(340px);
+        height: rem(45px);
+        border: none;
+        border-top-left-radius: rem(20px);
+        border-top-right-radius: rem(20px);
+        border-bottom-left-radius: rem(20px);
+        border-bottom-right-radius: rem(20px);
+        margin-bottom: rem(20px);
+
+    }
+    &__contact-form-style {
+        padding-left: rem(20px);
+        background: rgba(255, 255, 255, 0.7);
+        color: rgba(93, 90, 85, 0.5);
+        font-family: 'Roboto';
+        font-size: rem(16px);
+        &--textarea {
+            height: rem(140px);
+            padding-top: rem(10px);
+        }
+        
+    }
+    &__contact-form-button {
+        width: 100%;
+        display: flex;
+        &--submit, &--reset {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background-color: #6c9c5a;
+            height: rem(45px);
+            font-family: 'Roboto';
+            font-size: rem(16px);
+            font-weight: 500;
+            color: #ffffff;
+            border-right: 1px solid  #dee3e7;
+            transition: .3s;
+            &:last-child {
+                border-right: none;
+            }
+            &:hover {
+                background-color: #4e8839;
+                transition: .3s;
+            }
+        }
+    }
+}
+

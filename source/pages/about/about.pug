@@ -1,0 +1,125 @@
+extends ../base
+block head
+    title about
+block content 
+    include ../../commons/navigations/navigations
+    section.section.main
+        .main__header 
+            .greetings__logo
+                img.greetings__logo--img(src="../source/pages/index/images/my-photo.png", alt="my-photo")
+            .greetings__name Лепин Денис
+            .greetings__title Личный сайт веб разработчика
+        .main__arrow-down
+            a(href="http://").main__arrow-down-link
+                img(src="../source/pages/about/images/arrow-down.png", alt="arrow-down").main__arrow-down-img
+        include ../../commons/hamburger/hamburger
+    main.about
+        <div class="box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
+                <polygon class = "left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+                 <polygon class = "right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+            </svg>
+        </div>
+        .about__content 
+            .about__left
+                .about__me
+                    .about__left-title.about__left-title--about обо мне
+                .about__WhoAmI  
+                    .about__left-logo
+                        img(src="", alt="", srcset="").about__left-logo-img
+                    .about__left-title.about__left-title--small кто я
+                    .about__left-desc 
+                        p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                        p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+            .about__right
+                .about__right-content
+                    .about__right-title
+                        .about__left-title.about__left-title--small чем я могу быть вам полезен
+                    .about__right-desc
+                        .about__left-desc  
+                            p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку. 
+                    ul.about__right-list
+                        li.about__right-item.about__right-item--frontend  Frontend
+                            ul.about__right-frontend-list.about__right-frontend-list--frontend  
+                                li.about__right-frontend-item.about__right-frontend-item--frontend   
+                                    <svg width="140" height="140" class="g-circles">
+                                        <circle r="50" cx="70" cy="70" stroke="#ccc" fill="none" />
+                                        <circle r="50" cx="70" cy="70" stroke="#6c9c5a" transform="rotate(-90 70 70)"  class="html" />
+                                        <text x="45" y="75" fill="#566358" font-size="14" font-weight='bold' class='svgtext' font-family="'Roboto', cursive">HTML5</text>
+
+                                    </svg>
+                                li.about__right-frontend-item.about__right-frontend-item--frontend    
+                                    <svg width="140" height="140" class="g-circles">
+                                        <circle r="50" cx="70" cy="70" stroke="#ccc" fill="none" />
+                                        <circle r="50" cx="70" cy="70" stroke="#6c9c5a" transform="rotate(-90 70 70)"  class="css" />
+                                        <text x="55" y="75" fill="#566358" font-size="14" font-weight='bold' class='svgtext' font-family="'Roboto', cursive">CSS</text>
+                                    </svg>    
+                                li.about__right-frontend-item.about__right-frontend-item--frontend    
+                                    <svg width="140" height="140" class="g-circles">
+                                        <circle r="50" cx="70" cy="70" stroke="#ccc" fill="none" />
+                                        <circle r="50" cx="70" cy="70" stroke="#6c9c5a" transform="rotate(-90 70 70)"  class="js" />
+                                        <text x="60" y="75" fill="#566358" font-size="14" font-weight='bold' class='svgtext' font-family="'Roboto', cursive">JS</text>
+                                    </svg>  
+                        li.about__right-item.about__right-item--backend Backend
+                            ul.about__right-frontend-list 
+                                li.about__right-frontend-item   
+                                    <svg width="140" height="140" class="g-circles">
+                                        <circle r="50" cx="70" cy="70" stroke="#ccc" fill="none" />
+                                        <circle r="50" cx="70" cy="70" stroke="#6c9c5a" transform="rotate(-90 70 70)"  class="php" />
+                                        <text x="55" y="75" fill="#566358" font-size="14" font-weight='bold' class='svgtext' font-family="'Roboto', cursive">PHP</text>
+                                    </svg>
+                                li.about__right-frontend-item   
+                                    <svg width="140" height="140" class="g-circles">
+                                        <circle r="50" cx="70" cy="70" stroke="#ccc" fill="none" />
+                                        <circle r="50" cx="70" cy="70" stroke="#6c9c5a" transform="rotate(-90 70 70)"  class="mySQL" />
+                                        <text x="45" y="75" fill="#566358" font-size="14" font-weight='bold' class='svgtext' font-family="'Roboto', cursive">mySQL</text>
+                                    </svg>    
+                                li.about__right-frontend-item   
+                                    <svg width="140" height="140" class="g-circles">
+                                        <circle r="50" cx="70" cy="70" stroke="#ccc" fill="none" />
+                                        <circle r="50" cx="70" cy="70" stroke="#6c9c5a" transform="rotate(-90 70 70)"  class="nodeJS" />
+                                        <text x="45" y="75" fill="#566358" font-size="14" font-weight='bold' class='svgtext' font-family="'Roboto', cursive">Node.js</text>
+                                    </svg>  
+                                li.about__right-frontend-item   
+                                    <svg width="140" height="140" class="g-circles">
+                                        <circle r="50" cx="70" cy="70" stroke="#ccc" fill="none" />
+                                        <circle r="50" cx="70" cy="70" stroke="#6c9c5a" transform="rotate(-90 70 70)"  class="mongo" />
+                                        <text x="40" y="75" fill="#566358" font-size="14" font-weight='bold' class='svgtext' font-family="'Roboto', cursive">Mongo.db</text>
+                                    </svg> 
+                        li.about__right-item.about__right-item--workflow WorkFlow
+                            ul.about__right-frontend-list.about__right-frontend-item--frontend  
+                                li.about__right-frontend-item.about__right-frontend-item--frontend   
+                                    <svg width="140" height="140" class="g-circles">
+                                        <circle r="50" cx="70" cy="70" stroke="#ccc" fill="none" />
+                                        <circle r="50" cx="70" cy="70" stroke="#6c9c5a" transform="rotate(-90 70 70)"  class="git" />
+                                        <text x="60" y="75" fill="#566358" font-size="14" font-weight='bold' class='svgtext' font-family="'Roboto', cursive">Git</text>
+                                    </svg>
+                                li.about__right-frontend-item.about__right-frontend-item--frontend   
+                                    <svg width="140" height="140" class="g-circles">
+                                        <circle r="50" cx="70" cy="70" stroke="#ccc" fill="none" />
+                                        <circle r="50" cx="70" cy="70" stroke="#6c9c5a" transform="rotate(-90 70 70)"  class="webpack" />
+                                        <text x="55" y="75" fill="#566358" font-size="14" font-weight='bold' class='svgtext' font-family="'Roboto', cursive">Gulp</text>
+                                    </svg>    
+                                li.about__right-frontend-item.about__right-frontend-item--frontend   
+                                    <svg width="140" height="140" class="g-circles">
+                                        <circle r="50" cx="70" cy="70" stroke="#ccc" fill="none" />
+                                        <circle r="50" cx="70" cy="70" stroke="#6c9c5a" transform="rotate(-90 70 70)"  class="bower" />
+                                        <text x="50" y="75" fill="#566358" font-size="14" font-weight='bold' class='svgtext' font-family="'Roboto', cursive">Bower</text>
+                                    </svg>  
+        .about__map 
+            .about__contact
+                .about__left-title.about__left-title--small.about__contact-title контакты
+                ul.about__contact-list
+                    li.about__contact-item
+                        .about__contact-item-logo
+                        .about__contact-item-desc.about__left-desc  skype_kdn
+                    li.about__contact-item
+                        .about__contact-item-logo
+                        .about__contact-item-desc.about__left-desc  astahov@gmail.com
+                    li.about__contact-item
+                        .about__contact-item-logo
+                        .about__contact-item-desc.about__left-desc +7 931 200 93 24
+                    li.about__contact-item
+                        .about__contact-item-logo
+                        .about__contact-item-desc.about__left-desc Новосибирск 
+        include ../../commons/footer/footer

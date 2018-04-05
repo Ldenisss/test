@@ -1,0 +1,29 @@
+@import "../../commons/mixins/mixin.scss";
+.hamburger {
+    &__container {
+        position: absolute;
+        top: rem(20px);
+        right: rem(20px);
+        width: rem(40px);
+        height: rem(40px);
+        display: flex;
+        align-items: center;
+        z-index: 100;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        width: rem(40px);
+    }
+    &__item {
+        width: rem(40px);
+        height: rem(5px);
+        background-color: #fff;
+        margin-bottom: rem(10px);
+        border-top-left-radius: rem(2px);
+        border-top-right-radius: rem(2px);
+        border-bottom-left-radius: rem(2px);
+        border-bottom-right-radius: rem(2px);
+    }
+    
+}

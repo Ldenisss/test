@@ -1,0 +1,86 @@
+@import "../../commons/mixins/mixin.scss";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: rem(-147px);
+    &__row-up {
+        background-color: #373e42;
+        opacity: .85;
+        display: grid;
+        grid-template-rows: 90% 10%;
+        grid-template-areas: 
+            "up"
+            "down"
+    }
+    &__row-up-list  {
+        display: flex;
+        padding: rem(5px);
+        width: 100%;
+    }
+    &__row-up-list  {
+        grid-area: up;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+            "desc menu comment"
+            "desc menu comment";
+        @include tablets () {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 50% 50%;
+            grid-template-areas: 
+                "desc menu"
+                "comment comment";
+        }
+    }
+    &__row-up-item  {
+        &--desc {
+            grid-area: desc;
+            padding: rem(10px);
+            border-right: 1px solid #ffffff63;
+        }
+        &--menu {
+            grid-area: menu;
+            border-right: 1px solid #ffffff63;
+            padding: rem(10px);
+            @include tablets {
+                border: none;
+            }
+        }
+        &--comment {
+            grid-area: comment;
+            padding: rem(10px);
+        }
+        &--desc, &--menu, &--comment {
+            font-family: 'Roboto';
+        font-size: rem(16px);
+        font-weight: 300;
+        color: #ffffff;
+
+        }
+    }
+    &__row-up-desc {
+        font-family: 'Roboto';
+        font-size: rem(16px);
+        font-weight: 300;
+        color: #ffffff;
+        padding: rem(5px);
+        &--last {
+            color: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+        }
+        &--author {
+            font-weight: bold;
+        }
+    }
+    &__row-down {
+        grid-area: down;
+        display: grid;
+        justify-content: center;
+        background-color: #6c9c5a;
+        opacity: 0.85;
+    }
+}

@@ -1,0 +1,38 @@
+@import "../commons/mixins/mixin.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: rem(16px);
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    line-height: 1.42; 
+   
+}
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+body,html {
+    @include desktop  {
+        font-size: rem(16px);
+    }
+    @include tablets  {
+        font-size: rem(15px);
+
+    }
+    @include phones {
+        font-size: rem(13px);
+    }
+    @include phones-min  {
+        font-size: rem(11px);
+    }
+}
+
+ul,li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+.overlay {
+    overflow: hidden;
+}

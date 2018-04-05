@@ -1,0 +1,162 @@
+@import "../normalize/normalize.scss";
+@import "../mixins/mixin.scss";
+
+.work {
+   &__slider {
+       max-height: rem(750px);
+       height: 100vh;
+       display: grid;
+
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: 30% 40% 30%;
+       grid-template-areas: 
+            "info display"
+            "info display"
+            "info btns";
+        @include tablets () {
+            grid-template-areas: 
+                "display display"
+                "info info"
+                "btns btns";
+            grid-template-rows: 60% 35% 5%;
+            }    
+   }
+   &__slider-info  {
+       display: grid;
+       grid-area: info;
+       justify-content: center;
+       align-content: center;
+       background-color: #ebefe2;
+       @include tablets {
+           padding-bottom: rem(30px);
+       }
+   }
+   &__slider-display {
+       grid-area: display;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: #e1e4d7;
+   }
+   &__slider-desc {
+        font-family: 'Roboto';
+        font-size: rem(16px);
+        font-weight: 500;
+        color: #65873d;
+        display: grid;
+        justify-content: center;
+        margin-bottom: rem(38px);
+
+   }
+   &__slider-prev  {
+    display: grid;
+    justify-content: center;
+   }
+   &__slider-prev-link  {
+       display: flex;
+       width: rem(200px);
+       height: rem(45px);
+       overflow: hidden;
+       background-color: #7e9b5c;
+       border-top-left-radius: rem(30px);
+       border-top-right-radius: rem(30px);
+       border-bottom-left-radius: rem(30px);
+       border-bottom-right-radius: rem(30px);
+       justify-content: center;
+       align-items: center;
+   }
+   &__slider-prev-logo {
+       display: flex;
+   }
+   &__slider-prev-desc {
+       margin-left: rem(10px);
+       font-family: 'Roboto';
+        font-size: rem(16px);
+        font-weight: 500;
+        color: #ffffff;
+   }
+   &__slider-display-logo {
+       width: rem(643px);
+       height: rem(416px);
+       @include tablets () {
+           width: rem(597px);
+           height: rem(387px);
+       }
+   }
+   &__slider-display-img  {
+       width: 100%;
+       
+   }
+   &__slider-buttom {
+       grid-area: btns;
+       display: grid;
+       grid-template-columns: 50% 50%;
+   }
+   &__slider-buttom-left, &__slider-buttom-right {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       
+   }
+   &__slider-buttom-right {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+       &:after {
+           content: '';
+           position: absolute;
+           display: flex;
+           background-image: url("./images/down-link.png");
+           width: rem(55px);
+           height: rem(35px);
+           background-repeat: no-repeat;
+
+       }
+   }
+   &__slider-buttom-left {
+    display: flex;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+       &:after {
+           content: '';
+           position: absolute;
+           display: flex;
+           background-image: url("./images/up-link.png");
+           width: rem(55px);
+           height: rem(35px);
+           background-repeat: no-repeat; 
+       }
+   }
+   &__slider-buttom-left-logo, &__slider-buttom-right-logo {
+       width: rem(400px);
+       height: rem(200px);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       overflow: hidden;
+       @include tablets () {
+            width: rem(285px);
+            height: rem(195px);
+        }
+       
+       &--img {
+           width: 100%;
+       }
+       &:after {
+           position: absolute;
+           content: '';
+           display: flex;
+           background-color: rgba(176, 183, 170, 0.9);
+           width: 100%;
+           height: 100%;
+           transition: .3s;
+       }
+       &:hover::after {
+        background-color: rgba(176, 183, 170, 0.7);
+        transition: .3s;
+       }
+   }
+   
+}

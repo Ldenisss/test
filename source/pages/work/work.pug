@@ -1,0 +1,61 @@
+extends ../base
+block head
+    title work
+block content 
+    include ../../commons/navigations/navigations
+    section.section.main
+        .main__header 
+            .greetings__logo
+                img.greetings__logo--img(src="../source/pages/index/images/my-photo.png", alt="my-photo")
+            .greetings__name Лепин Денис
+            .greetings__title Личный сайт веб разработчика
+        .main__arrow-down
+            a(href="http://").main__arrow-down-link
+                img(src="../source/pages/about/images/arrow-down.png", alt="arrow-down").main__arrow-down-img
+        include ../../commons/hamburger/hamburger
+    main.work
+        <div class="box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
+                <polygon class = "left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+                 <polygon class = "right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+            </svg>
+        </div>
+        .work__title
+            .about__left-title.about__left-title--work мои работы 
+        include ../../commons/slider/slider
+        .work__about-me
+            .work__about-me-title
+                .about__left-title.about__left-title--about что обо мне говорят 
+            .work__about-me-content
+                ul.work__about-me-content-list  
+                    li.work__about-me-content-item  
+                        .work__about-me-content-logo
+                            img(src="../source/pages/work/images/comment-photo1.png", alt="").work__about-me-content-img
+                        .work__about-me-content-comment Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        .work__about-me-content-author  
+                            .work__about-me-content-author--name Ковальчук Дмитрий
+                            .work__about-me-content-author--job — основатель Loftschool
+                    li.work__about-me-content-item  
+                        .work__about-me-content-logo
+                            img(src="../source/pages/work/images/comment-photo2.png", alt="").work__about-me-content-img
+                        .work__about-me-content-comment Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                        .work__about-me-content-author  
+                            .work__about-me-content-author--name Сабанцев Владимир
+                            .work__about-me-content-author--job — преподаватель
+            .work__contact
+                .work__contact-title.about__left-title.about__left-title--small Связаться со мной
+                form(action="get").work__contact-form
+                    .work__contact-form-name 
+                        input(type="text" placeholder='Имя').work__contact-form-style
+                    .work__contact-form-email
+                        input(id="emailAddress" type="email" placeholder='Email').work__contact-form-style
+                    .work__contact-form-comment
+                        textarea(name="textarea", placeholder='Ваше сообщение' ).work__contact-form-style.work__contact-form-style--textarea 
+                    .work__contact-form-button
+                        button(type="submit").work__contact-form-button--submit Отправить
+                        button(type="reset").work__contact-form-button--reset Очистить
+        include ../../commons/footer/footer
+
+
+
+

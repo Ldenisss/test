@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head><link href="./css/index.css" rel="stylesheet"></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>index page</title>
+  <body>
+    <div class="wrapper">
+      <div class="container container__greetings">
+        <div class="greetings__authorization"><a class="authorization__btn" href="http://"> 
+            <div class="btn__name">Авторизоваться</div></a></div>
+        <div class="greetings__main">
+          <div class="greetings__content">
+            <div class="greetings__logo"><img class="greetings__logo--img" src="../source/pages/index/images/my-photo.png" alt="my-photo"></div>
+            <div class="greetings__name">Лепин Денис</div>
+            <div class="greetings__title">Личный сайт веб разработчика</div>
+            <div class="greetings__social"> 
+              <ul class="social__list">
+                <li class="social__item"><a href="http://">
+                    <svg>
+                      <use xlink:href=" "></use>
+                    </svg></a></li>
+                <li class="social__item"><a href="http://">
+                    <svg>
+                      <use xlink:href=" "></use>
+                    </svg></a></li>
+                <li class="social__item"><a href="http://">
+                    <svg>
+                      <use xlink:href=" "></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <div class="greetings__menu">
+              <ul class="menu__list">  
+                <li class="menu__item" style="width: 45%"><a class="menu__item-link" href="./work.html">Мои работы </a></li>
+                <li class="menu__item" style="width: 35%"> <a class="menu__item-link" href="./about.html">Обо мне </a></li>
+                <li class="menu__item" style="width: 20%"> <a class="menu__item-link" href="./blog.html">Блог </a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="greetings__authorization-content"> 
+            <div class="authorization-content__title">Авторизуйтесь</div>
+            <form class="authorization-content__form" action="get">
+              <div class="authorization-content__login">
+                <label class="authorization-content__login" for="login">
+                  <div class="authorization-content__login-logo"><img class="authorization-content__login-img" src="../source/pages/index/images/img-form.png" alt=""></div>
+                  <input class="authorization-content__input" type="text" name="login" placeholder="Логин">
+                </label>
+              </div>
+              <div class="authorization-content__password authorization-content__login">
+                <label class="authorization-content__login" for="password">
+                  <div class="authorization-content__password-logo"><img class="authorization-content-password-img" src="../source/pages/index/images/img-form.png" alt=""></div>
+                  <input class="authorization-content__input" type="text" name="password" placeholder="Пароль">
+                </label>
+              </div>
+              <div class="authorization-content__checkbox"> 
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox"> </label>
+                <div class="form__desc">Я человек</div>
+              </div>
+              <div class="form__desc">Вы точно не робот ?</div>
+              <div class="authorization-content__radio"> 
+                <input type="radio" value="1" name="answer" id="yes">
+                <label for="yes"></label>
+                <div class="form__desc">Да</div>
+                <input type="radio" name="answer" value="0" id="no">
+                <label for="no"></label>
+                <div class="form__desc"> Не уверен</div>
+              </div>
+              <div class="authorization-content__menu">
+                <ul class="authorization-content__menu-list">
+                  <li class="authorization-content__menu-item" style="width: 50%"><a class="authorization-content__menu-link-home" href="http://">На главную</a></li>
+                  <li class="authorization-content__menu-item" style="width: 50%">
+                    <label for="submit">
+                      <input class="authorization-content__menu-link-open" type="submit" name="submit">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="greetings__author">Лепин Денис | создано с любовью в LoftSchool | 2018         </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/index.js"></script></body>
+</html>

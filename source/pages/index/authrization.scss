@@ -1,0 +1,231 @@
+@function rem($px){
+    @return $px / 16px+0rem;
+}
+@mixin circle($width,$color) {
+    width: $width;
+    height: $width;
+    border-radius: $width/2;
+    background-color: $color;
+}
+.greetings__authorization-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: rem(380px);
+    background-image: url("./images/bg-content.png");
+    background-size: cover;
+    border-bottom-left-radius: rem(5px);
+    border-bottom-right-radius: rem(5px);
+    overflow: hidden;
+}
+.authorization-content{
+    
+    &__title {
+        font-size: rem(35px);
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: rem(35px);
+        
+        
+        &:after {
+            content: "";
+            display: flex;
+            width: rem(90px);
+            height: rem(3px);
+            background-color: #ffffff;
+            margin-top: rem(26px);
+            margin-bottom: rem(26px);
+            
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    &__login {
+        position: relative;
+        width: rem(340px);
+        height: rem(45px);
+        overflow: hidden;
+        align-items: center;
+        display: flex;
+        overflow: hidden;
+        border-top-left-radius: rem(30px);
+        border-top-right-radius: rem(30px);
+        border-bottom-left-radius: rem(30px);
+        border-bottom-right-radius: rem(30px);
+        
+    }
+    &__login-logo {
+        height: rem(45px);
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: rem(15px);
+            height: rem(17px);
+            background-image: url("./images/login.png");
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            
+        }
+    }
+    &__password-logo {
+        height: rem(45px);
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: rem(15px);
+            height: rem(17px);
+            background-image: url("./images/password.png");
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            
+        }
+    }
+    &__login-img {
+        height: rem(45px);
+    }
+    &__input {
+        height: rem(45px);
+        width: rem(300px);
+        border: none;
+        padding-left: rem(20px);
+        font-family: 'Roboto';
+        font-size: rem(16px);
+       
+        &:focus {
+            border: none;
+        }
+    }
+    &__password {
+        margin-top: rem(20px);
+    }
+    &__checkbox {
+        display: flex;
+        justify-content: center;
+        margin-top: rem(20px);
+        margin-bottom: rem(20px);
+    }
+    &__checkbox label {
+        display: flex;
+        width: rem(20px);
+        height: rem(20px);
+        position: relative;
+        background-color:  #4e8839;
+        border-radius: rem(5px);
+        &:after {
+
+            content: "";
+            position: absolute;
+            display: none;
+            width: rem(10px);
+            height: rem(10px);
+            background-image: url('./images/check.png');
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%); 
+            
+        }
+    }
+   
+   
+    
+    &__checkbox input[type=checkbox]{
+        position: absolute;
+        left: -9999px;
+        
+    }
+    &__checkbox input[type=checkbox]:checked + label {
+        &::after {
+            display: flex;
+        }
+    }
+    &__radio {
+        display: flex;
+        margin-top: rem(10px);
+        margin-bottom: rem(15px);
+        
+    }
+    &__radio label {
+        display: flex;
+        width: rem(20px);
+        height: rem(20px);
+        border-radius: 50%;
+        border: 1px solid #4e8839;
+        background-color: #fff;
+        position: relative;
+        margin-left: rem(10px);
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            width: rem(8px);
+            height: rem(8px);
+            color: #4e8839;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        
+        }
+    }
+    &__radio input[type=radio]{
+        position: absolute;
+        left: -9999px;
+        
+    }
+    &__radio input[type=radio]:checked + label {
+        &::after {
+            display: flex;
+        }
+    }
+    &__menu {
+        width: 100%;
+    }
+    &__menu-list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 100%;
+    }
+    &__menu-item {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #4e8839;
+        border-right: 1px solid #fff;
+        height: rem(45px);
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &__menu-link-home, &__menu-link-open {
+        text-decoration: none;
+        text-align: center;
+        color: #ffffff;
+        background-color: transparent;
+        border: none;
+        font-family: 'Roboto';
+        font-size: rem(16px);
+        
+    }  
+    
+}
+.form__desc {
+    font-size: rem(16px);
+    font-family: 'Roboto';
+    color: rgba(255, 255, 255, 0.8);;
+    padding-left: rem(10px);
+    
+}

@@ -1,0 +1,364 @@
+
+@import "../../commons/mixins/mixin.scss";
+// скилы 
+.g-circles {
+    fill: none;
+    stroke-width: 25;
+    position: relative;
+}
+.html {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+} 
+.css {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+} 
+.js {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+} 
+.php {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+}
+.mySQL {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+}
+.nodeJS {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+}
+.mongo {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+}
+.git {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+}
+.webpack {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+}
+.bower {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+}
+
+.svgtext {
+    
+}
+.about {
+    &__right-frontend-list {
+        display: flex;
+        margin: 0;
+        padding:  0;
+        
+    }
+    &__right-frontend-item  {
+        list-style-type: none;
+        margin-right: rem(40px);
+       
+    }
+    &__right-item  {
+        list-style-type: none;
+        margin-bottom: rem(40px);
+        font-family: 'Roboto';
+        font-size: rem(28px);
+        font-weight: 500;
+        color: #566358;
+    }
+    &__right-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+        width: 90%;
+    }
+    &__right-content {
+        width: 90%;
+        
+    }
+} 
+
+.main {
+    display: flex;
+    min-height: rem(700px);
+    background-image: url('./images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: rem(1176px);
+            height: rem(313px);
+            background-image: url('./images/portfolio-header.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            @include tablets () {
+                width: rem(738px);
+                
+            }
+            @include phones {
+                width: rem(400px);
+                top: 70%;
+            }
+        }
+        
+    }
+    &__arrow-down {
+        margin-top: rem(133px);
+    }
+    
+}
+.greetings {
+    &__logo {
+        width: rem(141px);
+        height: rem(141px);
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: rem(40px);
+        margin-bottom: rem(20px);
+    }
+    &__name {
+        font-family: 'Roboto';
+        font-size: rem(35px);
+        font-weight: 500;
+        color: #fff;
+    }
+    &__title {
+        font-family: 'Roboto';
+        font-size: rem(16px);
+        font-weight: normal;
+        color: #fff;
+        line-height: 1.5;
+    }
+}
+.box {
+    margin-top: rem(-200px);
+}
+.traingle .left{
+    fill: #ebefe2;
+}
+.traingle .right{
+    fill: #f4f5f0;
+    @include tablets {
+        fill: #ebefe2;
+    }
+}
+svg {
+    display: block;
+}
+.about {
+    max-height: rem(1000px);
+    
+    
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "left right" 
+            "left right";
+        @include tablets {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "left left" 
+            "right right";
+        }
+    }
+    &__left {
+        display: grid;
+        background-color: #ebefe2;
+        grid-area: left;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "me WhoAmI" 
+            "me WhoAmI";
+        @include tablets {
+            grid-template-columns:  1fr;
+            grid-template-rows: 10% 90%;
+            grid-template-areas:
+                "me me" 
+                "WhoAmI WhoAmI";
+            }
+        }
+        
+    
+    &__me {
+        display: grid;
+        grid-area: me;
+        justify-content: center;
+    }
+    &__WhoAmI  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: WhoAmI;
+        
+
+    }
+    
+    &__left-logo {
+        display: flex;
+        width: rem(470px);
+        height: rem(390px);
+        margin-bottom: rem(40px);
+        @include phones {
+            width: rem(400px);
+        }
+        
+    }
+    &__left-logo-img {
+        background-image: url('./images/about-my-photo.png');
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+    &__left-desc {
+        font-family: 'Roboto';
+        font-size: rem(16px); 
+        color: #566358;
+        width: 90%;
+        @include tablets {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: rem(500px);
+        }
+    }
+
+
+    //правая часть 
+
+    &__right {
+        background-color: #f4f5f0;
+        display: flex;
+        grid-area: right;
+        justify-content: center;
+        
+        
+    }
+    &__right-title, &__right-desc {
+        display: flex;
+        justify-content: center;
+    }
+    &__right-desc {
+        margin-bottom: rem(56px);
+    }
+    &__right-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 33.33% 33.33% 33.33%;
+        grid-template-areas:
+            "frontend"
+            "backend"
+            "workflow"; 
+    }
+    &__right-item {
+        &--frontend {
+            
+            grid-area: frontend;
+        }
+        &--backend {
+            grid-area: backend;
+        }
+        &--workflow {
+            grid-area: workflow;
+        }
+        &--workflow, &--backend, &--frontend {
+            @include tablets {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+        }
+    }
+    &__right-frontend-list  {
+        @include tablets {
+            margin-top: rem(20px);
+           
+        }
+        @include phones {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 50% 50%;
+            grid-template-areas:
+                "left right"
+                "midle midle"; 
+            
+        }
+        &--frontend {
+            @include phones {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 50% 50%;
+                grid-template-areas:
+                    "left right"
+                    "midle midle"; 
+                
+            }
+        }
+        
+
+    }
+    &__right-frontend-item {
+        &--frontend {
+            @include phones {
+                &:nth-child(1) {
+                    grid-area: left;
+                }
+                &:nth-child(2) {
+                    grid-area: right;
+                }
+                &:nth-child(3) {
+                    grid-area: midle;
+                    display: grid;
+                    justify-content: center;
+                }
+            }
+        }
+        
+    }
+    
+    // map
+
+    &__map {
+        max-height: rem(1000px);
+        background-image: url('./images/bg-map.png');
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+    }
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        width: rem(380px);
+        background-color: #f4f5f0;
+        opacity: 0.85;
+        align-items: center;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+    }
+    &__contact-title {
+        margin-top: rem(36px);
+    }
+}
